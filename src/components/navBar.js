@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {
-    Collapse,
     Navbar,
-    NavbarText,
     NavbarBrand,
     Nav,
     NavItem,
@@ -11,13 +9,25 @@ import {
 import { useMediaQuery } from 'react-responsive'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
+
 
 const NavBar = (props) => {
 
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-    const [isOpen, setIsOpen] = useState(false);
+    const [items, setItem] = useState(
+        [
+            {
+                name: "Home",
+                link: "#",
+            },
+            {
+                name: "Contact",
+                link: "#",
+            },
+        ]
 
-    const toggle = () => setIsOpen(!isOpen);
+    )
 
     return (
         <div className="warp-navbar">
@@ -25,12 +35,41 @@ const NavBar = (props) => {
                 isTabletOrMobile ?
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <FontAwesomeIcon icon={faAlignRight} />
+                        <Nav className="ml-auto" navbar>
+                            <FontAwesomeIcon icon={faAlignRight} />
+                        </Nav>
+
                     </Navbar>
                     :
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <NavbarText>Simple Text</NavbarText>
+                        <Nav className="ml-auto" navbar>
+                            {
+                                items.map((item, index) => (
+                                    <NavItem>
+                                        <NavLink href={item.link}>
+                                            {item.name}
+                                        </NavLink>
+                                    </NavItem>
+                                ))
+                            }
+                            <NavItem>
+                                <NavLink href="#">
+                                    <FontAwesomeIcon icon={faFacebookSquare} />
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="#">
+                                    <FontAwesomeIcon icon={faTwitterSquare} />
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="#">
+                                    <FontAwesomeIcon icon={faYoutubeSquare} />
+                                </NavLink>
+                            </NavItem>
+
+                        </Nav>
                     </Navbar>
 
             }
