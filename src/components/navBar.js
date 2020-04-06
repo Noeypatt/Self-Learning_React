@@ -2,19 +2,15 @@ import React, { useState } from 'react';
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
+    NavbarText,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
 } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive'
-import notification from '../image/bell.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = (props) => {
 
@@ -29,34 +25,12 @@ const NavBar = (props) => {
                 isTabletOrMobile ?
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <NavbarToggler onClick={toggle} />
-                        <Collapse isOpen={isOpen} navbar>
-                            <Nav className="mr-auto" navbar>
-                                <NavItem>
-                                    <NavLink href="/components/">Components</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="">GitHub</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
+                        <FontAwesomeIcon icon={faAlignRight} />
                     </Navbar>
                     :
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <NavbarToggler onClick={toggle} />
-                        <Collapse isOpen={isOpen} navbar>
-                            <Nav className="navbar-right-mb" navbar>
-                                <NavItem>
-                                    <NavLink href="/components/">Components</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="">GitHub</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                        <img className="hvr-rotate" src={notification} alt="notification" />
-
+                        <NavbarText>Simple Text</NavbarText>
                     </Navbar>
 
             }
