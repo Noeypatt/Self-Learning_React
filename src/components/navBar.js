@@ -36,7 +36,7 @@ const NavBar = (props) => {
                                     <NavLink href="/components/">Components</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                    <NavLink href="">GitHub</NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
@@ -46,12 +46,12 @@ const NavBar = (props) => {
                         <NavbarBrand href="/">reactstrap</NavbarBrand>
                         <NavbarToggler onClick={toggle} />
                         <Collapse isOpen={isOpen} navbar>
-                            <Nav className="mr-auto" navbar>
+                            <Nav className="navbar-right-mb" navbar>
                                 <NavItem>
                                     <NavLink href="/components/">Components</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                    <NavLink href="">GitHub</NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
