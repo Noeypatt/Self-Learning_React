@@ -14,27 +14,6 @@ console.log(moment.locale());
 const Header = () => {
 
     const date = moment().add(543, 'year').format('LL')
-    const dataCard = [
-        {
-            title: "Title",
-            icon: Plane
-        },
-        {
-            title: "Title",
-            icon: Bus 
-        },
-    ]
-    const dataCard2 = [
-        {
-            title: "Title",
-            icon: Car
-        },
-        {
-            title: "Title",
-            icon: Cruise
-        },
-    ]
-
     return (
         <div className="warp-header">
             <div className="header-left-content">
@@ -51,30 +30,6 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-right-content">
-                <div className="header-card">
-                    {
-                        dataCard.map((item, index) => {
-                            return (
-                                <Card key={index}>
-                                    <img src={item.icon} />
-                                    <CardTitle>{item.title}</CardTitle>
-                                </Card>
-                            )
-                        })
-                    }
-                </div>
-                <div className="header-card">
-                    {
-                        dataCard2.map((item, index) => {
-                            return (
-                                <Card key={index}>
-                                    <img src={item.icon} />
-                                    <CardTitle>{item.title}</CardTitle>
-                                </Card>
-                            )
-                        })
-                    }
-                </div>
             </div>
         </div>
     )
