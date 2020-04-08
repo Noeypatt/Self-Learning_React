@@ -4,9 +4,12 @@ import Header from './Header';
 
 function App() {
   return (
-    <div>
+    <div className="warp-index">
       <NavBar />
-      <Header />
+      <div className="warp-index-content">
+        <Header />
+      </div>
+
     </div>
   );
 }

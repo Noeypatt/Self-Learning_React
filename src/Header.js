@@ -1,12 +1,10 @@
 import React from 'react';
-import { Jumbotron, Button } from 'reactstrap';
-import picHeader from '../src/image/header.jpg'
+import { Jumbotron, Button, Input } from 'reactstrap';
 
 const Header = () => {
     return (
         <div className="warp-header">
-            <div className="header-content">
-                {/* <img src={picHeader} alt="header" /> */}
+            <div className="header-left-content">
                 <Jumbotron>
                     <h1 className="display-3">Hello, world!</h1>
                     <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -16,6 +14,13 @@ const Header = () => {
                         <Button color="primary">Learn More</Button>
                     </p>
                 </Jumbotron>
+                <div className="header-search">
+                    <Input type="text" name="search" id="search" placeholder="Search" />
+                    <Button>Search</Button>
+                </div>
+            </div>
+            <div className="header-right-content">
+
             </div>
 
         </div>
