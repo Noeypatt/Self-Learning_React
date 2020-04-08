@@ -15,6 +15,7 @@ import { faFacebookSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome
 const NavBar = (props) => {
 
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const title = "Nuntium"
     const [items, setItem] = useState(
         [
             {
@@ -26,23 +27,22 @@ const NavBar = (props) => {
                 link: "#",
             },
         ]
-
     )
 
     return (
         <div className="warp-navbar">
             {
                 isTabletOrMobile ?
-                    <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <Navbar expand="md">
+                        <NavbarBrand href="/">{title}</NavbarBrand>
                         <Nav className="ml-auto" navbar>
                             <FontAwesomeIcon icon={faAlignRight} />
                         </Nav>
 
                     </Navbar>
                     :
-                    <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <Navbar expand="md">
+                        <NavbarBrand href="/">{title}</NavbarBrand>
                         <Nav className="ml-auto" navbar>
                             {
                                 items.map((item, index) => (
