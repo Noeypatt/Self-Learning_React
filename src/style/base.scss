@@ -1,5 +1,6 @@
 @import "./navbar.scss";
 @import "./header.scss";
+@import "./discovery.scss";
 
 body {
     background: #151418;
@@ -11,4 +12,8 @@ body {
     .warp-index-content {
         padding: 1rem 2rem;
     }
+}
+
+.warp-content{
+    width: 100%;
 }

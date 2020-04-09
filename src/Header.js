@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import 'moment/locale/th';
-import { Jumbotron, Button, Input, Card, CardTitle, CardText } from 'reactstrap';
+import { Jumbotron, Input, Media } from 'reactstrap';
+
 import Cloudy from './image/cloudy.svg';
-import Plane from './image/plane.svg';
-import Car from './image/car.svg';
-import Bus from './image/Bus.svg';
-import Cruise from './image/cruise.svg';
 
 moment.locale('th');
 console.log(moment.locale());
@@ -26,10 +23,19 @@ const Header = () => {
                 </Jumbotron>
                 <div className="header-search">
                     <Input type="text" name="search" id="search" placeholder="Search" />
-                    <Button color="info">Search</Button>
                 </div>
             </div>
             <div className="header-right-content">
+                <Media>
+                    <Media left href="#">
+                    </Media>
+                    <Media body>
+                        <Media heading>
+                            <h5>Media heading</h5>
+                        </Media>
+                       D
+                    </Media>
+                </Media>
             </div>
         </div>
     )

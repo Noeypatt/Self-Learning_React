@@ -1,0 +1,70 @@
+$color-bg: #1d1c21;
+$font-color-primary: #49484f;
+$font-color-seconary: white !important;
+
+.warp-discovery {
+    width: 100%;
+    padding: 3rem 0;
+
+    h5 {
+        color: $font-color-seconary;
+        margin-bottom: 1rem;
+    }
+
+    .discovery-content {
+        display: flex;
+        justify-content: space-evenly;
+
+        .card {
+            background-color: $color-bg;
+            color: $font-color-primary;
+
+            .card-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p.card-text {
+                    margin: 0;
+                    user-select: none;
+                    color: $font-color-primary;
+                }
+
+                .icon {
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    background-size: cover;
+                }
+
+                .icon-like {
+                    background-image: url("../image/like.svg");
+                }
+
+                .icon-like:hover,
+                .icon-like:focus {
+                    background-image: url("../image/likeActive.svg");
+                }
+            }
+        }
+    }
+    .hvr-grow {
+        display: inline-block;
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
+
+    .hvr-grow:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.5);
+        color: $font-color-seconary;
+
+        .card-footer {
+            p.card-text {
+                color: $font-color-seconary;
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './components/navBar';
 import Header from './Header';
+import Content from './Content';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <NavBar />
       <div className="warp-index-content">
         <Header />
+        <Content />
       </div>
 
     </div>
