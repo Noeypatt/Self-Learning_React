@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import {
     Card, CardImg, CardText, CardBody, CardLink,
-    CardFooter, CardSubtitle
+    CardFooter,
 } from 'reactstrap';
 
 import Dis from '../image/dis1.jpg'
@@ -10,6 +12,10 @@ import Dis3 from '../image/dis3.jpg'
 import Dis4 from '../image/dis4.jpg'
 
 const Discovery = () => {
+
+    const like = useSelector(state => state.like)
+
+    const dispatch = useDispatch()
 
     const data = [
         {
@@ -37,6 +43,7 @@ const Discovery = () => {
             icon: "like"
         },
     ]
+
     return (
         <div className="warp-discovery">
             <h5>Discovery</h5>
@@ -50,8 +57,8 @@ const Discovery = () => {
                                     <CardText>{item.location}</CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <CardText href="#">{item.text}</CardText>
-                                    <span class={`icon icon-${item.icon}`}></span>
+                                    <CardText href="#">{like.count} {item.text}</CardText>
+                                    <span class={`icon icon-${item.icon}`} onClick={() => dispatch({ type: 'ADD_LIKE' })}></span>
                                 </CardFooter>
                             </Card>
                         )
