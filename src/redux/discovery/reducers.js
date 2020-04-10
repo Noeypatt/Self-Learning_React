@@ -16,3 +16,16 @@ const Like = (state = discovery, action) => {
 }
 
 export default Like
+
+
+// or
+// export const LikeReducer = (state = discovery, action) => {
+//     switch (action.type) {
+//         case 'ADD_LIKE':
+//             return { ...state, count: state.count + 1 }
+//         // return { ...state, count: state.count + 1,id: action.id }
+
+//         default:
+//             return state
+//     }
+// }
