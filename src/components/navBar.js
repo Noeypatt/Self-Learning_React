@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Navbar,
     NavbarBrand,
@@ -16,7 +16,7 @@ const NavBar = (props) => {
 
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     const title = "Nuntium"
-    const [items, setItem] = useState(
+    const items =
         [
             {
                 name: "Home",
@@ -27,7 +27,7 @@ const NavBar = (props) => {
                 link: "#",
             },
         ]
-    )
+
 
     return (
         <div className="warp-navbar">
@@ -46,7 +46,7 @@ const NavBar = (props) => {
                         <Nav className="ml-auto" navbar>
                             {
                                 items.map((item, index) => (
-                                    <NavItem>
+                                    <NavItem key={index}>
                                         <NavLink href={item.link}>
                                             {item.name}
                                         </NavLink>

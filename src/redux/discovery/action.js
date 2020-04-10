@@ -1,5 +1,10 @@
-let count = 0
-export const addLike = text => ({
-    type: 'ADD_LIKE',
-})
+export const setLike = {
+    add: () => (dispatch, getState) => {
+        let count = getState().like.count
+        dispatch({ type: 'SET_LIKE', payload: count + 1 })
+    },
+
+}
+
+
 

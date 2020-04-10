@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {
-    Card, CardImg, CardText, CardBody, CardLink,
-    CardFooter,
-} from 'reactstrap';
+import { setLike } from '../redux/discovery/action'
 
+import { Card, CardImg, CardText, CardBody, CardFooter, } from 'reactstrap';
 import Dis from '../image/dis1.jpg'
 import Dis2 from '../image/dis2.jpg'
 import Dis3 from '../image/dis3.jpg'
@@ -14,8 +12,9 @@ import Dis4 from '../image/dis4.jpg'
 const Discovery = () => {
 
     const like = useSelector(state => state.like)
+    const dispatch = useDispatch();
+    const action = bindActionCreators({ ...setLike }, useDispatch())
 
-    const dispatch = useDispatch()
 
     const data = [
         {
@@ -51,22 +50,20 @@ const Discovery = () => {
                 {
                     data.map((item, index) => {
                         return (
-                            <Card className="hvr-grow">
+                            <Card className="hvr-grow" key={index}>
                                 <CardImg top width="100%" src={item.img} alt={`Img-${index}`} />
                                 <CardBody>
                                     <CardText>{item.location}</CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
                                     <CardText href="#">{like.count} {item.text}</CardText>
-                                    <span class={`icon icon-${item.icon}`} onClick={() => dispatch({ type: 'ADD_LIKE' })}></span>
+                                    <span className={`icon icon-${item.icon}`} onClick={action.add}></span>
                                 </CardFooter>
                             </Card>
                         )
                     })
                 }
             </div>
-
-
         </div>
     )
 }

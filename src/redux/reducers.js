@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux'
-import LikeReducer from './discovery/reducers'
 
-export default combineReducers({
-    like : LikeReducer,
+import { combineReducers } from 'redux'
+import { likeReducer } from './discovery/reducers'
+
+const rootReducer = combineReducers({
+    like: likeReducer
 })
+
+export default rootReducer

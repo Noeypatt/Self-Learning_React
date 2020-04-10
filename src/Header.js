@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import moment from 'moment';
 import 'moment/locale/th';
-import { Jumbotron, Input, Media } from 'reactstrap';
+import { Jumbotron, Input, ListGroup, ListGroupItem, ListGroupItemText } from 'reactstrap';
 
 import Cloudy from './image/cloudy.svg';
 
 moment.locale('th');
-console.log(moment.locale());
 
 const Header = () => {
 
@@ -26,16 +25,16 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-right-content">
-                <Media>
-                    <Media left href="#">
-                    </Media>
-                    <Media body>
-                        <Media heading>
-                            <h5>Media heading</h5>
-                        </Media>
-                       D
-                    </Media>
-                </Media>
+                <ListGroup>
+                    <ListGroupItem>Cras justo odio</ListGroupItem>
+                    <ListGroupItemText>
+                        Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </ListGroupItemText>
+                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+                    <ListGroupItem>Morbi leo risus</ListGroupItem>
+                    <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
+                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                </ListGroup>
             </div>
         </div>
     )
