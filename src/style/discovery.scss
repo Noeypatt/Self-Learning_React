@@ -40,8 +40,11 @@ $font-color-seconary: white !important;
                     background-image: url("../image/like.svg");
                 }
 
-                .icon-like:hover,
-                .icon-like:focus {
+                .icon-likeActive {
+                    background-image: url("../image/likeActive.svg");
+                }
+
+                .icon-like:hover {
                     background-image: url("../image/likeActive.svg");
                 }
             }

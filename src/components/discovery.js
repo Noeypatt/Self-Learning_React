@@ -11,35 +11,41 @@ import Dis4 from '../image/dis4.jpg'
 
 const Discovery = () => {
 
+
+
+
     const like = useSelector(state => state.like)
-    const dispatch = useDispatch();
     const action = bindActionCreators({ ...setLike }, useDispatch())
 
-
+    console.log("Status: ", like.status);
     const data = [
         {
             img: Dis,
             location: "location detail",
             text: "Like",
-            icon: "like"
+            icon: "like",
+            active: "likeActive"
         },
         {
             img: Dis2,
             location: "location detail",
             text: "Like",
-            icon: "like"
+            icon: "like",
+            active: "likeActive"
         },
         {
             img: Dis3,
             location: "location detail",
             text: "Like",
-            icon: "like"
+            icon: "like",
+            active: "likeActive"
         },
         {
             img: Dis4,
             location: "location detail",
             text: "Like",
-            icon: "like"
+            icon: "like",
+            active: "likeActive"
         },
     ]
 
@@ -57,7 +63,14 @@ const Discovery = () => {
                                 </CardBody>
                                 <CardFooter className="text-muted">
                                     <CardText href="#">{like.count} {item.text}</CardText>
-                                    <span className={`icon icon-${item.icon}`} onClick={action.add}></span>
+                                    <span className={`icon icon-${!like.status ? item.icon : item.active}`}
+                                        onClick={
+                                            !like.status ?
+                                                action.like
+                                                :
+                                                action.unLike
+                                        }></span>
+
                                 </CardFooter>
                             </Card>
                         )
