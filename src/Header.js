@@ -27,9 +27,6 @@ const Header = () => {
             <div className="header-right-content">
                 <ListGroup>
                     <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItemText>
-                        Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-        </ListGroupItemText>
                     <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
                     <ListGroupItem>Morbi leo risus</ListGroupItem>
                     <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
