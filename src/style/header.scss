@@ -81,6 +81,10 @@ $color-bg: #1d1c21;
                 margin-bottom: 1rem;
                 color: $color-primary;
                 background-color: $color-bg;
+
+                .list-group-item-text{
+                    font-size: 1rem;
+                }
             }
         }
     }

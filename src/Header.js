@@ -1,13 +1,36 @@
 import React from 'react';
 import moment from 'moment';
 import 'moment/locale/th';
-import { Jumbotron, Input, ListGroup, ListGroupItem, ListGroupItemText } from 'reactstrap';
+import { Jumbotron, Input, ListGroup, ListGroupItemHeading, ListGroupItem, ListGroupItemText } from 'reactstrap';
 
 import Cloudy from './image/cloudy.svg';
 
 moment.locale('th');
 
 const Header = () => {
+
+    const dataList = [
+        {
+            title: "Title",
+            description: "description"
+        },
+        {
+            title: "Title",
+            description: "description"
+        },
+        {
+            title: "Title",
+            description: "description"
+        },
+        {
+            title: "Title",
+            description: "description"
+        },
+        {
+            title: "Title",
+            description: "description"
+        }
+    ]
 
     const date = moment().add(543, 'year').format('LL')
     return (
@@ -25,13 +48,21 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-right-content">
-                <ListGroup>
-                    <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Morbi leo risus</ListGroupItem>
-                    <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                </ListGroup>
+                {
+                    dataList.map((item, index) => {
+                        return (
+                            <ListGroup key={index}>
+                                <ListGroupItem>
+                                    <ListGroupItemHeading>{item.title}</ListGroupItemHeading>
+                                    <ListGroupItemText>
+                                        <p>{item.description}</p>
+                                    </ListGroupItemText>
+                                </ListGroupItem>
+                            </ListGroup>
+                        )
+                    })
+                }
+
             </div>
         </div>
     )
