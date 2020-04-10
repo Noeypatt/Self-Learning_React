@@ -6,9 +6,27 @@ $font-color-seconary: white !important;
     width: 100%;
     padding: 3rem 0;
 
-    h5 {
-        color: $font-color-seconary;
-        margin-bottom: 1.5rem;
+    .discovery-title {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        h5 {
+            color: $font-color-seconary;
+            margin-bottom: 1rem;
+        }
+        p {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: $font-color-seconary;
+            opacity: 0.5;
+            svg {
+                margin-left: 0.5rem;
+            }
+        }
+        p:hover{
+            opacity: 0.9;
+        }
     }
 
     .discovery-content {
