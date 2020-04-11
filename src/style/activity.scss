@@ -15,22 +15,12 @@ $font-color-seconary: white !important;
 
     .activitiy-content {
         display: flex;
-        justify-content: space-evenly;
         width: 100%;
+        margin-left: 2rem;
 
-        .card {
-            width: 30%;
-            background-color: $color-bg;
-            color: $font-color-primary;
-            border-radius: 1rem;
-            padding-top: 2rem;
-
-            img{
-                padding: 0 1rem;
-            }
-
-            .card-body {
-            }
+        .table {
+            width: 50%;
+            color: white;
         }
     }
 }
