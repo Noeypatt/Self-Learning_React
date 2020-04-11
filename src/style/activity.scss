@@ -21,6 +21,24 @@ $font-color-seconary: white !important;
         .table {
             width: 50%;
             color: white;
+            background-color: $color-bg;
+        }
+
+        .table-bordered thead th {
+            border-bottom-width: 1px;
+        }
+
+        .table thead th {
+            border-bottom: 1px solid $font-color-primary;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid $font-color-primary;
+        }
+
+        .table-bordered {
+            border: 1px solid $font-color-primary;
         }
     }
 }
