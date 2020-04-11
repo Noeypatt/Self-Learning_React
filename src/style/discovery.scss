@@ -1,6 +1,7 @@
 $color-bg: #1d1c21;
 $font-color-primary: #49484f;
 $font-color-seconary: white !important;
+$box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.5);
 
 .warp-discovery {
     width: 100%;
@@ -24,7 +25,7 @@ $font-color-seconary: white !important;
                 margin-left: 0.5rem;
             }
         }
-        p:hover{
+        p:hover {
             opacity: 0.9;
         }
     }
@@ -79,12 +80,40 @@ $font-color-seconary: white !important;
 
     .hvr-grow:hover {
         transform: scale(1.1);
-        box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.5);
+        box-shadow: $box-shadow;
         color: $font-color-seconary;
 
         .card-footer {
             p.card-text {
                 color: $font-color-seconary;
+            }
+        }
+    }
+
+    .discovery-footer {
+        margin-top: 1.5rem;
+        .pagination {
+            display: flex;
+            justify-content: flex-end;
+
+            .page-item {
+                .page-link {
+                    color: $font-color-primary;
+                    background-color: $color-bg;
+                    border-color: $color-bg;
+                }
+                .page-link:hover,
+                .page-link:focus {
+                    color: $font-color-seconary;
+                    box-shadow: $box-shadow;
+                }
+            }
+
+            .page-item.active {
+                .page-link {
+                    color: $font-color-seconary;
+                    box-shadow: $box-shadow;
+                }
             }
         }
     }

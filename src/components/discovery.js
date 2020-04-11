@@ -2,11 +2,10 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { setLike } from '../redux/discovery/action'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { Card, CardImg, CardText, CardBody, CardFooter, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-import { Card, CardImg, CardText, CardBody, CardFooter, } from 'reactstrap';
 import Dis from '../image/dis1.jpg'
 import Dis2 from '../image/dis2.jpg'
 import Dis3 from '../image/dis3.jpg'
@@ -66,7 +65,7 @@ const Discovery = () => {
                                     <CardText>{item.location}</CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <CardText href="#">{like.count} {item.text}</CardText>
+                                    <CardText href="">{like.count} {item.text}</CardText>
                                     <span className={`icon icon-${!like.status ? item.icon : item.active}`}
                                         onClick={
                                             !like.status ?
@@ -80,6 +79,38 @@ const Discovery = () => {
                         )
                     })
                 }
+            </div>
+            <div className="discovery-footer" >
+                <Pagination aria-label="Page navigation example">
+                    <PaginationItem>
+                        <PaginationLink first href="" />
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink previous href="" />
+                    </PaginationItem>
+                    <PaginationItem active>
+                        <PaginationLink href="">
+                            1
+                        </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="">
+                            2
+                        </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="">
+                            3
+                        </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink next href="" />
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink last href="" />
+                    </PaginationItem>
+                </Pagination>
+
             </div>
         </div>
     )
