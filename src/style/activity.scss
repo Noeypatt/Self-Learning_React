@@ -34,6 +34,7 @@ $font-color-seconary: white !important;
 
         .table-bordered td,
         .table-bordered th {
+            font-weight: 100;
             border: 1px solid $font-color-primary;
         }
 
