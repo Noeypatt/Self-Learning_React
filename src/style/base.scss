@@ -1,6 +1,7 @@
 @import "./navbar.scss";
 @import "./header.scss";
 @import "./discovery.scss";
+@import "./activity.scss";
 
 body {
     background: #151418;
@@ -14,6 +15,6 @@ body {
     }
 }
 
-.warp-content{
+.warp-content {
     width: 100%;
 }
