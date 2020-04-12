@@ -1,13 +1,14 @@
 .warp-footer {
     position: fixed;
-    width: 100%;
+    left: 0;
     bottom: 0;
-    max-height: 3rem;
-    background-color: #151418;
+    width: 100%;
+    color: white;
     text-align: center;
 
     .footer-title {
         margin: 1rem 0;
+        width: 100%;
 
         p {
             color: white;

@@ -6,7 +6,7 @@ function Content() {
     return (
         <div className="warp-content">
             <Discovery />
-            <Activitiy />
+            {/* <Activitiy /> */}
         </div>
     )
 }
