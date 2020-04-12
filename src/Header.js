@@ -45,6 +45,7 @@ const Header = () => {
                         </div>
                         <div className="header-title-content">
                             <h3>Have you ever seen the orange clouds?</h3>
+                            <h3></h3>
                         </div>
 
                     </div>

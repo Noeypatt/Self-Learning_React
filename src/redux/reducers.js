@@ -1,9 +1,9 @@
 
 import { combineReducers } from 'redux'
-import { likeReducer } from './discovery/reducers'
+import { cardReducer } from './discovery/reducers'
 
 const rootReducer = combineReducers({
-    like: likeReducer
+    card: cardReducer
 })
 
 export default rootReducer
