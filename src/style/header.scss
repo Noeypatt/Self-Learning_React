@@ -1,5 +1,6 @@
 $color-primary: white;
 $color-bg: #1d1c21;
+$color-btn: #ff3200;
 
 .warp-header {
     display: flex;
@@ -47,9 +48,9 @@ $color-bg: #1d1c21;
                 .header-title-btn {
                     margin-top: 2rem;
                     .btn {
-                        background-color: #ff3200;
+                        background-color: $color-btn;
                         border-radius: 1rem;
-                        border-color: #ff3200;
+                        border-color: $color-btn;
                     }
                 }
             }
