@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { setLike } from '../redux/discovery/action'
@@ -9,13 +9,18 @@ import { Card, CardImg, CardText, CardBody, CardFooter, Pagination, PaginationIt
 
 const Discovery = () => {
 
-    const data = useSelector(state => state.card)
+    const data = useSelector(state => state.data)
     const action = bindActionCreators({ ...setLike }, useDispatch())
 
-    const handlerLike = () => {
+    const handlerLike = (id, status) => {
 
+        if (status) {
+            action.unLike(id)
+        }
+        else {
+            action.like(id)
+        }
     }
-
 
     return (
         <div className="warp-discovery">
@@ -37,9 +42,7 @@ const Discovery = () => {
                                 <CardFooter className="text-muted">
                                     <CardText href="">{item.count} Like</CardText>
                                     <span className={`icon icon-${!item.status ? item.icon : item.active}`}
-                                        onClick={
-                                            handlerLike(item.id)
-                                        }
+                                        onClick={() => { handlerLike(item.id, item.status) }}
                                     >
                                     </span>
                                 </CardFooter>

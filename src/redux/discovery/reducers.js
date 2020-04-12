@@ -42,17 +42,24 @@ const data = {
             count: 0
         },
     ],
-    addCard: [],
-    total: 0,
+    cardTotal: [],
     count: 0,
     status: false,
+
 }
 
 export const cardReducer = (state = data, action) => {
     switch (action.type) {
         case 'SET_LIKE':
             {
-                return state = { ...state }
+                let cardToggleLike = state.card.find(item => item.id === action.id)
+                console.log("cardToggleLike: ", cardToggleLike.id);
+
+                return state = {
+                    ...state,
+                    card: state.card.map(item => item.id === cardToggleLike.id && !cardToggleLike.status ? { ...item, status: true, count: item.count + 1 } : { ...item, status: false, count: item.count = 0 }),
+                }
+
             }
 
         default:
