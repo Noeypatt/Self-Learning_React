@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { setLike } from '../redux/discovery/action'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardImg, CardText, CardBody, CardFooter, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
-
 import Dis from '../image/dis1.jpg'
 import Dis2 from '../image/dis2.jpg'
 import Dis3 from '../image/dis3.jpg'
@@ -16,37 +15,58 @@ const Discovery = () => {
     const like = useSelector(state => state.like)
     const action = bindActionCreators({ ...setLike }, useDispatch())
 
-    console.log("Status: ", like.status);
-    const data = [
-        {
-            img: Dis,
-            location: "location detail",
-            text: "Like",
-            icon: "like",
-            active: "likeActive"
-        },
-        {
-            img: Dis2,
-            location: "location detail",
-            text: "Like",
-            icon: "like",
-            active: "likeActive"
-        },
-        {
-            img: Dis3,
-            location: "location detail",
-            text: "Like",
-            icon: "like",
-            active: "likeActive"
-        },
-        {
-            img: Dis4,
-            location: "location detail",
-            text: "Like",
-            icon: "like",
-            active: "likeActive"
-        },
-    ]
+    const [data, setData] = useState(
+        [
+            {
+                id: 1,
+                img: Dis,
+                location: "location detail",
+                text: "Like",
+                icon: "like",
+                active: "likeActive",
+                status: false
+            },
+            {
+                id: 2,
+                img: Dis2,
+                location: "location detail",
+                text: "Like",
+                icon: "like",
+                active: "likeActive",
+                status: false
+            },
+            {
+                id: 3,
+                img: Dis3,
+                location: "location detail",
+                text: "Like",
+                icon: "like",
+                active: "likeActive",
+                status: false
+            },
+            {
+                id: 4,
+                img: Dis4,
+                location: "location detail",
+                text: "Like",
+                icon: "like",
+                active: "likeActive",
+                status: false
+            },
+        ]
+    )
+
+    const [status, setStatus] = useState(false)
+
+    const handlerLike = (idCard) => {
+        if (status) {
+            setStatus(false)
+        }
+        else {
+            setStatus(true)
+        }
+
+    }
 
     return (
         <div className="warp-discovery">
@@ -59,22 +79,29 @@ const Discovery = () => {
                 {
                     data.map((item, index) => {
                         return (
-                            <Card className="hvr-grow" key={index}>
+                            <Card className="hvr-grow" key={index}  >
                                 <CardImg top width="100%" src={item.img} alt={`Img-${index}`} />
                                 <CardBody>
                                     <CardText>{item.location}</CardText>
                                 </CardBody>
+
                                 <CardFooter className="text-muted">
+                                    <CardText href="">{status ? 1 : 0} {item.text}</CardText>
+                                    <span className={`icon icon-${!status ? item.icon : item.active}`}
+                                        onClick={
+                                            handlerLike
+                                        }>
+                                    </span>
+                                </CardFooter>
+
+                                {/* <CardFooter className="text-muted">
                                     <CardText href="">{like.count} {item.text}</CardText>
                                     <span className={`icon icon-${!like.status ? item.icon : item.active}`}
                                         onClick={
-                                            !like.status ?
-                                                action.like
-                                                :
-                                                action.unLike
-                                        }></span>
-
-                                </CardFooter>
+                                            handlerLike(item.id, like.status)
+                                        }>
+                                    </span>
+                                </CardFooter> */}
                             </Card>
                         )
                     })
@@ -88,7 +115,7 @@ const Discovery = () => {
                     <PaginationItem>
                         <PaginationLink previous href="" />
                     </PaginationItem>
-                    <PaginationItem active>
+                    <PaginationItem >
                         <PaginationLink href="">
                             1
                         </PaginationLink>
@@ -112,7 +139,7 @@ const Discovery = () => {
                 </Pagination>
 
             </div>
-        </div>
+        </div >
     )
 }
 export default Discovery;

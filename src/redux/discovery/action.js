@@ -1,11 +1,25 @@
+
 export const setLike = {
-    like: (status) => (dispatch, getState) => {
+
+    like: () => (dispatch, getState) => {
         let count = getState().like.count
-        dispatch({ type: 'SET_LIKE', payload: count + 1, payload2: status = true })
+        dispatch({
+            type: 'SET_LIKE',
+            payload: {
+                count: count + 1,
+                status: true
+            }
+        })
     },
-    unLike: (status) => (dispatch, getState) => {
+    unLike: () => (dispatch, getState) => {
         let count = getState().like.count
-        dispatch({ type: 'SET_LIKE', payload: count - 1, payload2: status = false })
+        dispatch({
+            type: 'SET_LIKE',
+            payload: {
+                count: count - 1,
+                status: false
+            }
+        })
     }
 
 }
