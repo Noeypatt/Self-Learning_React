@@ -33,13 +33,20 @@ const Header = () => {
     ]
 
     const date = moment().add(543, 'year').format('LL')
+
     return (
         <div className="warp-header">
             <div className="header-left-content">
                 <Jumbotron>
                     <div className="header-title">
-                        <img src={Cloudy} alt="planet-earth" />
-                        <h6>วันที่ {date} </h6>
+                        <div className="header-title-date">
+                            <img src={Cloudy} alt="planet-earth" />
+                            <h6>วันที่ {date} </h6>
+                        </div>
+                        <div className="header-title-content">
+                            <h3>Have you ever seen the orange clouds?</h3>
+                        </div>
+
                     </div>
                     <p></p>
                 </Jumbotron>
