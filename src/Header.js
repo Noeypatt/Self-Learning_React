@@ -11,22 +11,27 @@ const Header = () => {
 
     const dataList = [
         {
+            delay: 0,
             title: "Title",
             description: "description"
         },
         {
+            delay: 1,
             title: "Title",
             description: "description"
         },
         {
+            delay: 2,
             title: "Title",
             description: "description"
         },
         {
+            delay: 3,
             title: "Title",
             description: "description"
         },
         {
+            delay: 4,
             title: "Title",
             description: "description"
         }
@@ -64,7 +69,7 @@ const Header = () => {
                 {
                     dataList.map((item, index) => {
                         return (
-                            <ListGroup key={index}>
+                            <ListGroup key={index} className={`animated fadeInRight delay-${item.delay}s`}>
                                 <ListGroupItem>
                                     <ListGroupItemHeading>{item.title}</ListGroupItemHeading>
                                     <ListGroupItemText>
