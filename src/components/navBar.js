@@ -10,6 +10,8 @@ import { useMediaQuery } from 'react-responsive'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
+import { faBell } from '@fortawesome/free-regular-svg-icons'
+
 
 
 const NavBar = (props) => {
@@ -36,9 +38,17 @@ const NavBar = (props) => {
                     <Navbar expand="md">
                         <NavbarBrand href="/">{title}</NavbarBrand>
                         <Nav className="ml-auto" navbar>
-                            <FontAwesomeIcon icon={faAlignRight} />
+                            <NavItem>
+                                <NavLink href="#">
+                                    <FontAwesomeIcon icon={faBell} />
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="#">
+                                    <FontAwesomeIcon icon={faAlignRight} />
+                                </NavLink>
+                            </NavItem>
                         </Nav>
-
                     </Navbar>
                     :
                     <Navbar expand="md">
