@@ -65,7 +65,6 @@ const Discovery = () => {
         else {
             setStatus(true)
         }
-
     }
 
     return (
