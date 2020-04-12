@@ -41,6 +41,16 @@ $color-bg: #1d1c21;
 
                 .header-title-content {
                     display: flex;
+                    flex-direction: column;
+                }
+
+                .header-title-btn {
+                    margin-top: 2rem;
+                    .btn {
+                        background-color: #ff3200;
+                        border-radius: 1rem;
+                        border-color: #ff3200;
+                    }
                 }
             }
 

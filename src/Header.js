@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
-import 'moment/locale/th';
-import { Jumbotron, Input, ListGroup, ListGroupItemHeading, ListGroupItem, ListGroupItemText } from 'reactstrap';
+// import 'moment/locale/th';
+import { Jumbotron, Input, ListGroup, ListGroupItemHeading, ListGroupItem, ListGroupItemText, Button } from 'reactstrap';
 
 import Cloudy from './image/cloudy.svg';
 
-moment.locale('th');
+// moment.locale('th');
 
 const Header = () => {
 
@@ -32,7 +32,9 @@ const Header = () => {
         }
     ]
 
-    const date = moment().add(543, 'year').format('LL')
+    // const date = moment().add(543, 'year').format('LL')
+    const date = moment().format('LL')
+
 
     return (
         <div className="warp-header">
@@ -41,11 +43,14 @@ const Header = () => {
                     <div className="header-title">
                         <div className="header-title-date">
                             <img src={Cloudy} alt="planet-earth" />
-                            <h6>วันที่ {date} </h6>
+                            <h6> {date} </h6>
                         </div>
                         <div className="header-title-content">
                             <h3>Have you ever seen the orange clouds?</h3>
-                            <h3></h3>
+                            <p>orange clouds | blue sky</p>
+                        </div>
+                        <div className="header-title-btn">
+                            <Button>Get start</Button>
                         </div>
 
                     </div>
