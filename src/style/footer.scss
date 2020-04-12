@@ -1,5 +1,5 @@
 .warp-footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -8,8 +8,6 @@
 
     .footer-title {
         margin: 1rem 0;
-        width: 100%;
-
         p {
             color: white;
             margin-block-start: 0;
