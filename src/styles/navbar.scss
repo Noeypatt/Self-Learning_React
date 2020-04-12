@@ -1,0 +1,33 @@
+$bg-color: transparent;
+
+.warp-navbar {
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    z-index: 100;
+
+    .ant-layout {
+        background: $bg-color;
+
+        .ant-layout-header {
+            display: flex;
+            padding: 0 5rem;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $bg-color;
+
+            .logo{
+                h1{
+                    margin: 0;
+                }
+            }
+
+           
+            .ant-menu {
+                display: flex;
+                border-right: none;
+                background: $bg-color;
+            }
+        }
+    }
+}
