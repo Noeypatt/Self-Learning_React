@@ -13,7 +13,12 @@ $font-color: white;
         }
 
         .navbar-nav {
+            display: flex;
+            flex-direction: row;
             .nav-link {
+                @media (max-width: 575.98px) {
+                    margin-left:  0.5rem;
+                }
                 color: $font-color;
             }
             .nav-link:hover {

@@ -29,6 +29,10 @@ $color-btn: #ff3200;
             opacity: 0.9;
             margin-bottom: 1rem;
 
+            @media (max-width: 576px) {
+                padding: 1rem !important;
+            }
+
             @media (max-width: 1024px) {
                 height: 35vh;
             }
@@ -37,10 +41,21 @@ $color-btn: #ff3200;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+
+                @media (max-width: 576px) {
+                    text-align: center;
+                  }
+
                 .header-title-date {
+                    width: 100%;
                     display: flex;
                     align-items: flex-end;
                     margin-bottom: 1rem;
+
+                    @media (max-width: 576px) {
+                      justify-content: center;
+                    }
+
                     img {
                         margin-right: 1rem;
                         width: 2rem;
@@ -63,6 +78,10 @@ $color-btn: #ff3200;
                         background-color: $color-btn;
                         border-radius: 1rem;
                         border-color: $color-btn;
+                    }
+                    @media (max-width: 576px) {
+                        width: 100%;
+                        margin-top: 0;
                     }
                 }
             }
