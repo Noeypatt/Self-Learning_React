@@ -5,6 +5,8 @@
     height: 80vh;
 
     background-image: url("../assets/cover.jpg");
-    background-size: cover; 
-    opacity: 0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Menu } from 'antd';
-
+import Pawprints from '../assets/pawprints.svg'
 
 
 const Navbar = () => {
@@ -38,6 +38,7 @@ const Navbar = () => {
             <Layout className="layout">
                 <Header>
                     <div className="logo" >
+                        <img src={Pawprints} alt="logo" />
                         <h1>Pets Shop</h1>
                     </div>
                     <Menu>
