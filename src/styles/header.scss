@@ -1,4 +1,5 @@
-$font-header: "Sue Ellen Francisco", cursive;
+$font-header: "Prompt", sans-serif;
+// "Sue Ellen Francisco", cursive;
 
 .warp-header {
     top: 0;
@@ -40,6 +41,11 @@ $font-header: "Sue Ellen Francisco", cursive;
         h1 {
             font-size: 3rem;
             margin-bottom: 0;
+            font-family: $font-header;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
         }
     }
 }

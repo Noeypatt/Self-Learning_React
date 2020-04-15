@@ -4,8 +4,9 @@ const Header = () => {
     return (
         <div className="warp-header">
             <div className="header-container">
-                <h1>Be kind to dog</h1>
-                <h2>Every dog ​​deserves love and care.</h2>
+                <h1>ศูนย์รับเลี้ยง สุนัข และแมวจรจัด</h1>
+                <h2>สัตว์เลี้ยงทุกตัว ล้วนต้องการความรัก เเละการดูเเล</h2>
+                <h2>ให้คุณได้เป็นส่วนหนึ่ง ที่ได้ช่วยเหลือพวกเขา</h2>
             </div>
 
         </div>
