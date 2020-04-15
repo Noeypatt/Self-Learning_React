@@ -1,3 +1,5 @@
+$font-header: "Sue Ellen Francisco", cursive;
+
 .warp-header {
     top: 0;
     width: 100%;
@@ -21,5 +23,23 @@
     @media (max-width: 575.98px) {
         height: 35vh;
         background-size: cover;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        height: 5rem;
+        margin-top: 6rem;
+        padding: 5rem;
+
+        font-family: $font-header;
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
     }
 }

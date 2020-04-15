@@ -1,4 +1,7 @@
 $bg-color: transparent;
+$font-header: "Roboto Slab", serif;
+
+// font-family: 'Comfortaa', cursive;
 
 .warp-navbar {
     position: fixed;
@@ -15,22 +18,21 @@ $bg-color: transparent;
             align-items: center;
             justify-content: space-between;
             background-color: $bg-color;
+            font-family: $font-header;
 
-            .logo{
+            .logo {
                 display: flex;
                 align-items: center;
-                img{
-
+                img {
                     width: 2rem;
                     height: 2rem;
                     margin-right: 0.5rem;
                 }
-                h1{
+                h1 {
                     margin: 0;
                 }
             }
 
-           
             .ant-menu {
                 display: flex;
                 border-right: none;
